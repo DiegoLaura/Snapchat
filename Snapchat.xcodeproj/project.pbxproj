@@ -14,6 +14,10 @@
 		56E7CC3A2AFAE06800B88305 /* Snapchat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56E7CC382AFAE06800B88305 /* Snapchat.xcdatamodeld */; };
 		56E7CC3C2AFAE06C00B88305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E7CC3B2AFAE06C00B88305 /* Assets.xcassets */; };
 		56E7CC3F2AFAE06C00B88305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E7CC3D2AFAE06C00B88305 /* LaunchScreen.storyboard */; };
+		56E7CC472AFAE0A500B88305 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56E7CC462AFAE0A500B88305 /* GoogleService-Info.plist */; };
+		56E7CC4A2AFAE5D200B88305 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 56E7CC492AFAE5D200B88305 /* FirebaseAnalytics */; };
+		56E7CC4C2AFAE5D200B88305 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 56E7CC4B2AFAE5D200B88305 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		56E7CC4E2AFAE5D200B88305 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 56E7CC4D2AFAE5D200B88305 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,7 @@
 		56E7CC3B2AFAE06C00B88305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56E7CC3E2AFAE06C00B88305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56E7CC402AFAE06C00B88305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56E7CC462AFAE0A500B88305 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E7CC4A2AFAE5D200B88305 /* FirebaseAnalytics in Frameworks */,
+				56E7CC4E2AFAE5D200B88305 /* FirebaseAuth in Frameworks */,
+				56E7CC4C2AFAE5D200B88305 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,7 @@
 				56E7CC3D2AFAE06C00B88305 /* LaunchScreen.storyboard */,
 				56E7CC402AFAE06C00B88305 /* Info.plist */,
 				56E7CC382AFAE06800B88305 /* Snapchat.xcdatamodeld */,
+				56E7CC462AFAE0A500B88305 /* GoogleService-Info.plist */,
 			);
 			path = Snapchat;
 			sourceTree = "<group>";
@@ -86,6 +95,11 @@
 			dependencies = (
 			);
 			name = Snapchat;
+			packageProductDependencies = (
+				56E7CC492AFAE5D200B88305 /* FirebaseAnalytics */,
+				56E7CC4B2AFAE5D200B88305 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				56E7CC4D2AFAE5D200B88305 /* FirebaseAuth */,
+			);
 			productName = Snapchat;
 			productReference = 56E7CC2C2AFAE06800B88305 /* Snapchat.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 56E7CC232AFAE06800B88305;
+			packageReferences = (
+				56E7CC482AFAE5D200B88305 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 56E7CC2D2AFAE06800B88305 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E7CC3F2AFAE06C00B88305 /* LaunchScreen.storyboard in Resources */,
+				56E7CC472AFAE0A500B88305 /* GoogleService-Info.plist in Resources */,
 				56E7CC3C2AFAE06C00B88305 /* Assets.xcassets in Resources */,
 				56E7CC372AFAE06800B88305 /* Main.storyboard in Resources */,
 			);
@@ -360,6 +378,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56E7CC482AFAE5D200B88305 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56E7CC492AFAE5D200B88305 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56E7CC482AFAE5D200B88305 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		56E7CC4B2AFAE5D200B88305 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56E7CC482AFAE5D200B88305 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		56E7CC4D2AFAE5D200B88305 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56E7CC482AFAE5D200B88305 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		56E7CC382AFAE06800B88305 /* Snapchat.xcdatamodeld */ = {
